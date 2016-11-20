@@ -17,6 +17,31 @@ public class Ejercicio401 {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner (System.in);
 		
+		int contador1,contador2;
+		String frase;
+		
+		System.out.println("Introduzca una frase con un máximo de 80 caracteres:");
+		frase=teclado.nextLine();
+		
+		if (frase.length()<=80){
+			
+			for(contador1=0;contador1<frase.length();contador1++){
+				
+				for (contador2=0;contador2<=contador1;contador2++){
+					
+					System.out.print(frase.charAt(contador2));
+					
+				}
+				
+				System.out.println("");	
+			}
+		}
+		
+		
+	}
+}
+
+/*		
 		int x,y;
 		String frase;
 	
@@ -42,3 +67,4 @@ public class Ejercicio401 {
 	
 	}
 }
+*/
