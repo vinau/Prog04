@@ -20,12 +20,12 @@ public class Ejercicio402 {
 				
 				caracter=frase.charAt(posicion);
 				
-				if (caracter<90){
+				if (caracter<='Z' && caracter>='A'){
 					
 					contadorMayus++;
 				}
 				
-				else {
+				if (caracter<='z' && caracter>='a' ) {
 					
 					contadorMinus++;
 					
