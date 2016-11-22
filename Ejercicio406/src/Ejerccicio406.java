@@ -3,7 +3,7 @@ Leer una frase por teclado (máximo 80) y a continuación escribir cuantas vocales
  numéricos posee.
 */
 import java.util.Scanner;
-public class Ejercicio407 {
+public class Ejerccicio406 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,17 +21,19 @@ public class Ejercicio407 {
 				
 				caracter=frase.charAt(contador);
 				
-				if (caracter=='a' | caracter=='A' | caracter=='e' | caracter=='E' | caracter=='i' | caracter=='I' 
-						| caracter=='o'| caracter=='O'| caracter=='u'| caracter=='U'){
-					contadorvocales++;
-				}
 				if ( caracter=='0'| caracter=='1'| caracter=='2'| caracter=='3'| caracter=='4'| caracter=='5'
 						| caracter=='6'| caracter=='7'| caracter=='8'| caracter=='9'){
 					contadornumeros++;
 				}
+				if (caracter=='a' | caracter=='A' | caracter=='e' | caracter=='E' | caracter=='i' | caracter=='I' 
+						| caracter=='o'| caracter=='O'| caracter=='u'| caracter=='U'){
+					contadorvocales++;	
+				}
 				else {
 					contadorconsonantes++;
 				}
+				
+				contador++;
 			}
 			System.out.println("Numero de vocales = " + contadorvocales);
 			System.out.println("Numero de numeros = " + contadornumeros);
