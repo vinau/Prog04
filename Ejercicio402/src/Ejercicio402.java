@@ -8,7 +8,7 @@ public class Ejercicio402 {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner (System.in);
 		
-		int contadorMayus=0,contadorMinus=0,posicion=0,caracter=0;
+		int contadorMayus=0,contadorMinus=0,caracter=0;
 		String frase;
 		
 		System.out.println("Introduzca una frase con un máximo de 80 caracteres:");
@@ -16,24 +16,23 @@ public class Ejercicio402 {
 	
 		if (frase.length()<=80){
 		
-			while (posicion<frase.length()){
+			for (int posicion=0;posicion<frase.length();posicion++){
 				
 				caracter=frase.charAt(posicion);
 				
-				if (caracter<='Z' && caracter>='A'){
+				if (caracter<='Z' && caracter>='A'|| caracter =='Ñ' ){
 					
 					contadorMayus++;
 				}
 				
-				if (caracter<='z' && caracter>='a' ) {
+				if (caracter<='z' && caracter>='a' || caracter=='ñ' ) {
 					
 					contadorMinus++;
 					
 				}
 				
 				//System.out.println(caracter);
-				
-				posicion++;
+			
 				
 			}
 			
@@ -46,7 +45,7 @@ public class Ejercicio402 {
 /*		
 		int x,y;
 		String frase;
-	
+	while (posicion<frase.length()){
 		
 		System.out.println("Introduzca una frase con un máximo de 80 caracteres:");
 		frase=teclado.nextLine();

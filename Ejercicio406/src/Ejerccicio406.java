@@ -10,40 +10,44 @@ public class Ejerccicio406 {
 		Scanner teclado=new Scanner (System.in);
 		
 		String frase;
-		int contador=0,caracter=0,contadorvocales=0,contadorconsonantes=0,contadornumeros=0;
+		int caracter=0,contadorvocales=0,contadorconsonantes=0,contadornumeros=0;
 		
 		System.out.println("Introduzca una frase de maximo 80 caracteres");
 		frase= teclado.nextLine();
 		
 		if (frase.length()<80) {
 			
-			while (contador<frase.length()) {
+			for (int contador=0; contador<frase.length(); contador++) {
 				
 				caracter=frase.charAt(contador);
 				
-				if ( caracter=='0'| caracter=='1'| caracter=='2'| caracter=='3'| caracter=='4'| caracter=='5'
-						| caracter=='6'| caracter=='7'| caracter=='8'| caracter=='9'){
-					contadornumeros++;
-				}
 				if (caracter=='a' | caracter=='A' | caracter=='e' | caracter=='E' | caracter=='i' | caracter=='I' 
-						| caracter=='o'| caracter=='O'| caracter=='u'| caracter=='U'){
+						| caracter=='o'| caracter=='O'| caracter=='u'| caracter=='U')
+				{
 					contadorvocales++;	
 				}
-				else {
+				
+				else if (caracter>'a' && caracter<'z' ) {
+					
 					contadorconsonantes++;
+					
+					}
+				
+				else if (caracter=='0'| caracter=='1'| caracter=='2'| caracter=='3'| caracter=='4'| caracter=='5'
+						| caracter=='6'| caracter=='7'| caracter=='8'| caracter=='9') {
+					
+					contadornumeros++;
+					
+				}
+					
 				}
 				
-				contador++;
-			}
 			System.out.println("Numero de vocales = " + contadorvocales);
 			System.out.println("Numero de numeros = " + contadornumeros);
-			System.out.println("Numero de consonantes = " + contadorconsonantes);
+			System.out.println("Cantadidad de consonantes = " + contadorconsonantes);
 		}
 		else {
 			System.out.println("La frase supera los 80 caracteres");
-			
-			
-			
 			
 		}
 

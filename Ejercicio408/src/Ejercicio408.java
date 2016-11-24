@@ -13,12 +13,15 @@ public class Ejercicio408 {
 		Scanner teclado = new Scanner (System.in);
 		
 		int posicion=0,numero,caracter=0;
-		String frase;
+		String frase, mayus;
+		
 		
 		System.out.println("Introduce una frase");
-		frase=teclado.nextLine();
+		mayus=teclado.nextLine();
 		
-		System.out.println(frase.toUpperCase());
+		frase = mayus.toUpperCase();
+		
+		System.out.println(frase);
 	
 
 		System.out.println("Selecciona un numero entre 1 y 10");
@@ -28,11 +31,20 @@ public class Ejercicio408 {
 				
 			caracter=frase.charAt(posicion);
 			
-				System.out.print(caracter);
 				caracter=caracter+numero;
 				
 				posicion++;
+				
+				System.out.print((char)caracter);
+				
 			}
+		while (posicion<frase.lenght()){
+			
+			
+			
+		}
+		
+		
 			
 		}
 		

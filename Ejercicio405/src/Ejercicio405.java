@@ -8,7 +8,7 @@ public class Ejercicio405 {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner (System.in);
 		
-		String frase,frase1,frase2;
+		String frase,frase1= "",frase2 = "";
 		int posicion=0, posicion2=1;
 		
 		System.out.println("Introduzca una frase de maximo 80 caracteres");
@@ -20,32 +20,29 @@ public class Ejercicio405 {
 			
 			while (posicion<frase.length()) {
 				
-				System.out.print(frase.charAt(posicion));
+				if ( posicion % 2 == 0 ) {
+					
+				 frase1= frase1 + frase.charAt(posicion);
 				
-				posicion=posicion+2;
+				}
 				
+				else {
+					
+					 frase2= frase2 + frase.charAt(posicion);
+					  
+				}
+				
+				posicion++;
 			}
 			
-			System.out.println("");
-			
-			while (posicion2<frase.length()){
-				
-				System.out.print(frase.charAt(posicion2));
-				
-				posicion2=posicion2+2;
-			}
+			System.out.println(frase1);
+			System.out.println(frase2);
 			
 		}
 		else {
 			System.out.println("Has superado el maximo de 80 caracteres");
 			
-			
-			
-			
 		}
-		
-		
-		
 		
 	}
 
