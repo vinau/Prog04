@@ -12,8 +12,8 @@ public class Ejercicio408 {
 		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner (System.in);
 		
-		int posicion=0,numero,caracter=0;
-		String frase, mayus;
+		int posicion=0,numero,caracter=0, caracter2=0;
+		String frase, mayus, frase2="";
 		
 		
 		System.out.println("Introduce una frase");
@@ -23,9 +23,34 @@ public class Ejercicio408 {
 		
 		System.out.println(frase);
 	
-
 		System.out.println("Selecciona un numero entre 1 y 10");
 		numero=teclado.nextInt();
+		
+		/*
+		for (posicion=0;posicion<frase.length();posicion++) {
+			
+			caracter=frase.charAt(posicion);
+			
+			caracter=caracter+numero;
+			
+			System.out.print((char)caracter);
+			
+			caracter2= caracter - numero;
+			frase2= frase2 + caracter2;
+			
+		}
+		int caracter3=0;
+		
+		System.out.println("");
+		
+		for (posicion=0; posicion<frase2.length(); posicion++) {
+			
+			caracter3=frase2.charAt(posicion);
+			 
+			 System.out.print((char)caracter3);
+			
+		}
+		*/
 		
 		while (posicion<frase.length()){
 				
@@ -33,21 +58,40 @@ public class Ejercicio408 {
 			
 				caracter=caracter+numero;
 				
-				posicion++;
-				
 				System.out.print((char)caracter);
 				
+			//System.out.println("");
+			//	caracter=caracter-numero;
+				
+			//	System.out.print((char)caracter);
+				
+				posicion++;
+				caracter2= caracter - numero;
+				frase2= frase2 + caracter2;
+				//System.out.println("");
+			//	System.out.print((char)caracter2);
+				
+				
 			}
-		while (posicion<frase.lenght()){
+		posicion=0;
+		
+		while (posicion<frase2.length()) {
 			
+			caracter2=frase2.charAt(posicion);
+			 
+			 System.out.print((char)caracter);
 			
+			 posicion++;
+		}
 			
+		
+		
 		}
 		
 		
 			
 		}
 		
-	}
+	
 
 
